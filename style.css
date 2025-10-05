@@ -1,0 +1,207 @@
+/* =======================
+   BODY & LAYOUT
+   ======================= */
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  font-family: Arial, sans-serif;
+  background: #ffffff;
+  color: #34495e;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Main content takes remaining space */
+main {
+  flex: 1;
+  padding-bottom: 2rem;
+}
+
+/* =======================
+   GLASS CARD
+   ======================= */
+.glass-card {
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 16px;
+  border: 1px solid rgba(0,0,0,0.1);
+  backdrop-filter: blur(8px);
+  transition: background 0.3s, color 0.3s;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+/* MCQ Card Background (light mode) */
+.mcq-card {
+  background: rgba(230, 126, 34, 0.15); /* subtle orange tint */
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* =======================
+   NAVBAR & SUB-NAV
+   ======================= */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+/* Sub-navigation buttons */
+.sub-nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin: 0.5rem 0;
+}
+
+.sub-nav button {
+  background: #e67e22; /* orange */
+  color: black;
+  font-weight: bold;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.sub-nav button:hover {
+  background: #d35400;
+  color: white;
+}
+
+/* Dark mode sub-nav buttons */
+body.dark .sub-nav button {
+  color: white;
+  font-weight: bold;
+}
+
+/* =======================
+   BUTTONS
+   ======================= */
+button#generateBtn,
+button#submitQuiz,
+button#newMCQs {
+  background: #e67e22;
+  color: black;
+  border: none;
+  font-weight: bold;
+  transition: all 0.3s;
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px;
+}
+button#generateBtn:hover,
+button#submitQuiz:hover,
+button#newMCQs:hover {
+  background: #d35400;
+  color: white;
+}
+
+/* =======================
+   MCQ OPTIONS
+   ======================= */
+.mcq-option {
+  transition: all 0.3s ease;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  display: block;
+  cursor: pointer;
+}
+
+/* Hover effect for MCQ options */
+.mcq-option:hover {
+  background: rgba(230, 126, 34, 0.1);
+}
+
+/* =======================
+   HEADINGS & TEXT
+   ======================= */
+h2 {
+  color: #e67e22;
+}
+p.font-bold {
+  color: #34495e;
+}
+
+/* =======================
+   FOOTER
+   ======================= */
+footer {
+  background: #34495e;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: auto; /* sticky footer */
+}
+
+/* =======================
+   DARK MODE
+   ======================= */
+body.dark {
+  background: #2c3e50;
+  color: #f9fafb;
+}
+
+/* Glass cards in dark mode */
+body.dark .glass-card {
+  background: rgba(52, 73, 94, 0.95);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* MCQ cards in dark mode */
+body.dark .mcq-card {
+  background: rgba(52, 73, 94, 0.85);
+  color: white;
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+/* Textarea & select in dark mode */
+body.dark textarea,
+body.dark select {
+  background: #34495e;
+  color: white;
+  border-color: #e67e22;
+}
+
+/* Headings & bold text in dark mode */
+body.dark h2,
+body.dark p.font-bold {
+  color: white;
+  font-weight: bold;
+}
+
+/* MCQ options in dark mode */
+body.dark .mcq-option {
+  color: white;
+  font-weight: bold;
+  background: rgba(255,255,255,0.05);
+}
+body.dark .mcq-option:hover {
+  background: rgba(230,126,34,0.2);
+}
+
+/* =======================
+   HOME PAGE MCQs - DARK MODE CORRECTIONS
+   ======================= */
+body.dark #homeMCQs .mcq-card {
+  background: rgba(255, 255, 255, 0.95); /* white card in dark mode */
+  color: black; /* text black */
+  font-weight: normal;
+  border: 1px solid rgba(0,0,0,0.2);
+}
+
+/* MCQ options in dark mode for home page */
+body.dark #homeMCQs .mcq-card p {
+  color: black; /* normal options black */
+  font-weight: normal;
+}
+
+/* Correct answer styling in dark mode */
+body.dark #homeMCQs .mcq-card p.correct {
+  color: #006400; /* dark green */
+  font-weight: bold;
+}
