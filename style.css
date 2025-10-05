@@ -202,6 +202,6 @@ body.dark #homeMCQs .mcq-card p {
 
 /* Correct answer styling in dark mode */
 body.dark #homeMCQs .mcq-card p.correct {
-  color: #006400; /* dark green */
+  color: Black; /* dark green */
   font-weight: bold;
 }
