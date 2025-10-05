@@ -78,7 +78,7 @@ generateBtn.addEventListener("click", ()=>{
     div.innerHTML=`
       <p class="font-bold text-indigo-600 mb-2">Q${index+1}. ${mcq.question}</p>
       ${optionsHtml}
-      <p class="mt-2 font-semibold text-green-600">Answer: ${mcq.answer}</p>
+      <p class="mt-2 font-bold text-black-600">Answer: ${mcq.answer}</p>
     `;
     homeMCQs.appendChild(div);
   });
